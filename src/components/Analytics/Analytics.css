@@ -1,0 +1,60 @@
+.analytics__datepicker {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-bottom: 3vh;
+}
+
+.analytics__datepicker .DateRangePicker {
+    height: 30px;
+}
+
+.analytics__datepicker .DateRangePickerInput {
+    border: none;
+    border: 1px solid rgb(163, 159, 159);
+    border-radius: 50%;
+}
+
+.analytics__datepicker .DateRangePickerInput_arrow {
+    display: none;
+
+}
+
+.analytics__datepicker .DateInput_input {
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.analytics__tablecontrolarea {
+    width: 87%;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+.analytics__tablecontrolarea .analytics__tableButton {
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+
+.analytics__tablecontrolarea .analytics__applyButton {
+    position: relative;
+    left: 69.2vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border: 1px solid rgb(194, 189, 189);
+}
+
+.analytics__tableButton_active {
+    border-top: 1px solid rgb(194, 189, 189);
+    border-left: 4px solid rgb(36, 118, 211);
+    border-right: 1px solid rgb(194, 189, 189);
+    border-bottom: 1px solid rgb(194, 189, 189);
+    background-color: rgb(241, 237, 237);
+}
+
+.analytics__tableButton_inactive {
+    border: 1px solid rgb(194, 189, 189);
+    background-color: rgb(241, 237, 237);
+}

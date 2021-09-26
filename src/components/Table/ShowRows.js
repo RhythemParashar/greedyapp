@@ -1,5 +1,6 @@
 import { displayRowsLogic } from './TableUtilities/rowDisplay';
 import React, { useState, useMemo } from 'react';
+import './ShowRows.css';
 
 const useSortableData = (items, config = null) => {
     const [sortConfig, setSortConfig] = useState(config);
@@ -40,10 +41,10 @@ const ShowRows = ({currentState, reports, apiLoadingStatus, apiError, ColumnHead
 
     return (
         <tbody>
-            <tr>
+            <tr className="showrows__sortrow">
                 {Object.entries(ColumnHeader).map((Columns, index) => {
                     if (Object.keys(currentState.hiddenColumns).find(key => key === Columns[0]) === undefined) {
-                        return <td key={"tbody_" + index + Columns[1][0]}><button onClick={() => requestSort(Columns[1][1])}>↕</button></td>
+                        return <td key={"tbody_" + index + Columns[1][0]}><button className='showrows__sortButton' onClick={() => requestSort(Columns[1][1])}><i class="bi bi-funnel"></i></button></td>
                     }
                     else 
                         return null;
@@ -52,7 +53,7 @@ const ShowRows = ({currentState, reports, apiLoadingStatus, apiError, ColumnHead
 
             {
                 apiLoadingStatus ? (
-                    < tr><td>Loading</td></tr>
+                    <tr><td>Loading</td></tr>
                 ) : apiError ? (<tr><td>{apiError}</td></tr>)
                 : (
                     items.map((report, index) => {

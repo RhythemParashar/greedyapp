@@ -1,0 +1,8 @@
+.showrows__sortButton {
+    border: none;
+    background-color: white;
+}
+
+.showrows__sortrow:hover {
+    background-color: white !important;
+}

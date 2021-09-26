@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { showHeader } from './TableUtilities/showHeader';
 import ShowRows from './ShowRows';
 import { getReports } from '../../ReduxUtilities/TableSelectors';
+import './Table.css';
+
 
 
 const Table = ({currentState, getreport, apiLoadingStatus, apiError}) => {
@@ -21,8 +23,8 @@ const Table = ({currentState, getreport, apiLoadingStatus, apiError}) => {
     }
 
     return (
-        <div>
-            <table key="table">
+        <div className='table__container'>
+            <table key="table" className='table'>
                 <thead key="thead">
                     <tr key="thead_tr">
                         {showHeader(currentState, ColumnHeader)}
